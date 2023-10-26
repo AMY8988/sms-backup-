@@ -1,0 +1,229 @@
+$text-color-one: #4b4254;
+$text-color-two: #80a2c8;
+
+
+// .card-table{
+//     width: 80%;
+
+//     @include mixin.lg{
+//         width: 100% !important;
+//     }
+// }
+
+
+.card {
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption,
+th,
+td {
+    // background: white;
+    padding: 0.5rem;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+caption {
+    background: hsl(0 0% 0%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+th {
+    // color: white;
+    // background: hsl(0 0% 0% /0.5);
+}
+
+tr:not(.table-header-text):hover {
+    background-color: #f8f9fa;
+}
+
+// tr:nth-of-type(2n) {
+//     background: hsla(0, 1%, 57%, 0.1);
+// }
+
+
+
+tr {
+    border-bottom: 1px solid #a4a4a4;
+}
+
+.table-header-text {
+    color: #918b99;
+    border-bottom: 2.5px solid #a4a4a4;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2;
+    height: 50px;
+}
+
+.table-header{
+    border-bottom: 2px solid black;
+    position: sticky;
+    top: -10px;
+    z-index: 2;
+    background: #fff;
+}
+
+.upload-btn,
+.download-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 100px;
+    font-weight: bolder;
+
+    padding: 5px 0px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+}
+.download-btn {
+    background-color: #c4e2ff;
+    color: #007aff;
+    // gap: 20px;
+}
+.upload-btn {
+    background-color: #c9ffe3;
+    color: #42bd16;
+    // gap: 10px;
+}
+.edit-btn,
+.delete-btn {
+    /* display: block; */
+    width: 22px;
+    height: 25px;
+    padding: 0px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+.edit-btn {
+    background: #c4e2ff;
+    color: #007aff;
+}
+.delete-btn {
+    background-color: #ffdde7;
+    color: #f94862;
+}
+
+.control {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    // background-color: white;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px; /* Set your desired height */
+    // background-color: #f0f0f0; /* Optional background color for the container */
+    // border: 1px solid black;
+    // border-radius: 100%;
+}
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+}
+.profile-text,
+.email-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.profile-text span,
+.email-text span {
+    margin: 5px;
+}
+
+.disable{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 100px;
+    font-weight: bolder;
+
+    padding: 5px 0px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    pointer-events: none;
+    background-color: $grey-200;
+
+}
+
+tr {
+    color: $text-color-one;
+    // font-weight: bold;
+}
+
+.mild-text-color {
+    color: $text-color-two;
+}
+
+@media (max-width: 992px) {
+    th {
+        display: none;
+    }
+    td {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 15ch auto;
+        // padding: 0.5rem 1rem;
+        // display: block;
+        padding: 0.5rem 1rem;
+    }
+    td:first-child {
+        padding-top: 2rem;
+    }
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    // td:nth-of-type(1)::before {
+    //     content: "name";
+    // }
+    // td:nth-of-type(2)::before {
+    //     content: "poles positions";
+    // }
+    // td:nth-of-type(3)::before {
+    //     content: "podiums";
+    // }
+}

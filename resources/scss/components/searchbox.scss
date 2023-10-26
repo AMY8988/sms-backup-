@@ -1,0 +1,59 @@
+.search_container{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+
+
+
+    @include mixin.md{
+        justify-content: end;
+    }
+}
+
+
+.search_bar{
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    padding: 3px 10px;
+    margin:0 10px ;
+    background-color: #fff;
+
+    @include mixin.md{
+        width: 250px;
+    }
+
+    @include mixin.md{
+        width: 20%;
+    }
+
+}
+
+.search_icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #918B99;
+
+    @include mixin.md{
+        width: 14px;
+
+    }
+}
+
+.count{
+    display: none;
+    margin-left: 10px;
+    margin-right: auto;
+
+    @include mixin.md{
+        display: block;
+    }
+}

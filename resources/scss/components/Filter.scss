@@ -1,0 +1,51 @@
+.filterBtn_container
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+
+    @include mixin.md{
+        display: none;
+    }
+}
+
+.clear-btn{
+    width: 80px;
+    height: 35px;
+    display: none !important;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $blue-400;
+    background-color: transparent;
+
+    gap: 10px;
+    color: #009EF7;
+
+    @include mixin.md{
+        display: flex;
+    }
+}
+
+.filter-btn
+{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-400;
+    color: #fff;
+}
+
+.count-mobile{
+    margin-right: auto;
+}
+
+.filterSubmit-btn{
+    padding:7px 10px;
+    background-color: $blue-400;
+    color: #fff;
+    margin: 10px 0;
+}

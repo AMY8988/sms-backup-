@@ -1,0 +1,27 @@
+@each $key,$val in $StaticColors {
+    //eg. .text-primary
+    .text-#{$key} {
+        color: $val;
+    };
+
+    .bg-#{$key} {
+        background-color: $val;
+    };
+
+    @for $i from 1 through 5 {
+        // eg. .text-primary-1
+        .text-#{$key}-#{$i} {
+            color: mix( white, $val, $i * 10%);
+        }
+
+        .bg-#{$key}-#{$i} {
+            background-color: mix( white,  $val, $i * 10%);
+        }
+
+        .border-#{$key}-#{$i} {
+            border-color: $val;
+        }
+    }
+
+
+}

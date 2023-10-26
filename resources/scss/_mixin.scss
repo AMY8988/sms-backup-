@@ -1,0 +1,44 @@
+// Mobile
+@mixin es() {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media only screen and (min-width: 425px) {
+        @content;
+    }
+}
+
+// Tablet
+@mixin md() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// PC
+@mixin lg() {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media only screen and (min-width: 1181px) {
+        @content;
+    }
+}
+
+@mixin xl() {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin xxl() {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}

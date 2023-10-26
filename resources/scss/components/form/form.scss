@@ -1,0 +1,42 @@
+/*  Form    */
+.form_group {
+    font-size: $mb-sm-font;
+    font-weight: 500;
+    margin-top: 10px;
+
+    @include mixin.md {
+        font-size: $md-font;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+}
+
+.form_label {
+    display: block;
+}
+
+.form_control {
+    margin-top: 5px;
+    background-color: $grey-200;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+
+    @include mixin.md {
+        margin-top: 8px;
+    }
+}
+
+.form_error {
+    margin-top: 5px;
+    color: $red-400;
+    font-size: $mb-sm-font;
+    visibility: hidden;
+
+    @include mixin.md {
+        margin-top: 8px;
+        font-size: $sm-font;
+    }
+}
+/*  END Form    */

@@ -1,0 +1,43 @@
+.destop-sidebar {
+    display: none;
+
+    @include mixin.md {
+        display: block;
+
+        .sidebar_container {
+            width: 70px;
+            height: 100vh;
+            background-color: $primary-color;
+
+            img {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            .sidebar-logo__img {
+                margin-top: 5px;
+            }
+
+            .tab-menu__sidebar {
+                padding-top: 4rem;
+                width: 89%;
+
+                .active {
+                    background-color: #022c46;
+                    border-radius: 7px;
+                    padding: 10px;
+
+                    .active-font__sidebar{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .sidebar-profile__logout {
+                gap: 1.563rem;
+                margin-top: auto;
+                margin-bottom: 0.81rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.student-create__card{
+  width: 50%;
+
+  .student-form__card{
+    gap:10px;
+
+    .img-add_button{
+      position: relative;
+
+      img{
+        width: 4rem;
+      }
+
+      .add-student__btn_color {
+        color: #ffffff;
+        background-color: #009ef7;
+        &:hover {
+            background-color: #0092e4;
+        }
+        padding: 4px;
+        position: absolute;
+        top: 49px;
+        right: 0;
+
+    }
+    }
+
+    
+    h2{
+      margin-top: 0.5rem;
+    }
+
+    .create-student__modal__btn{
+      margin-top: 40px;
+
+      .student-create__cancel{
+        background-color: #7A8196;
+        color: #fff;
+      }
+
+      .student-create__save__btn{
+        background-color: #007AFF;
+        color: #fff;
+      }
+    }
+  }
+}

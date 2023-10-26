@@ -1,0 +1,101 @@
+/*--  Color   --*/
+$primary-color: #043452;
+// black
+$black-400: #071437;
+$black-300: #252f4a;
+// grey
+$grey-400: #78829d;
+$grey-300: #b5b5c3;
+$grey-200: #f1f1f2;
+$grey-100: #f9f9f9;
+// blue
+$blue-400: #3e97ff;
+$blue-300: #51a1ff;
+$blue-200: #fafdff;
+// red
+$red-400: #f1416c;
+
+
+
+$StaticColors: (
+    "primary": $primary-color,
+    "secondary": #4b4254,
+    "info": $blue-400,
+    "danger": $red-400,
+    "success": #31bb00,
+);
+/*--  END Color   --*/
+
+
+
+/*--  Start Width   --*/
+@for $i from 1 through 10 {
+    .w-#{$i} {
+        width: $i * 10%;
+    }
+}
+/*--  End Width   --*/
+
+
+
+/*--  Start Border-radius   --*/
+@for $i from 1 through 10 {
+    .rounded-#{$i} {
+        border-radius: #{$i}px;
+    }
+};
+/*--  End Border-radius   --*/
+
+
+/*--  Start Shadow   --*/
+@for $i from 1 through 10 {
+    .shadow-#{$i} {
+        box-shadow: 3px 0px  5px #{$i}px #b8b4b429;;
+    }
+}
+/*--  End Shadow   --*/
+
+/*--  Start Margin   --*/
+@for $i from 1 through 10 {
+    .m-#{$i} {
+        margin: $i + 2px;
+    }
+
+    .me-#{$i} {
+        margin-right: $i + 2px;
+    }
+
+    .ms-#{$i} {
+        margin-left: $i + 2px;
+    }
+
+    .mt-#{$i} {
+        margin-top: $i + 2px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: $i + 2px;
+    }
+}
+/*--  End Margin   --*/
+
+
+
+
+
+
+/*  Font Size    */
+$xs-font: 7px;
+$sm-font: 10px;
+$md-font: 13px;
+$lg-font: 16px;
+$xl-font: 19px;
+$xxl-font: 22px;
+
+$mb-xs-font: 0.6em;
+$mb-sm-font: 0.8em;
+$mb-md-font: 1em;
+$mb-lg-font: 1.2em;
+$mb-xl-font: 1.4em;
+$mb-xxl-font: 1.6em;
+/*--  END Font Size   --*/

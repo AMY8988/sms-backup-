@@ -1,0 +1,60 @@
+.nav_container {
+    width: 100vw;
+    height: 70px;
+    background-color: #ffffff;
+
+
+    .mobile-nav__leftmenu {
+        margin-left: 1.25rem;
+        gap: 10px;
+    }
+
+    .desktop-nav__leftmenu {
+        display: none;
+    }
+
+    .desktop-student {
+        display: none;
+    }
+
+    @include mixin.md {
+        width: 100%;
+
+        .mobile-nav__leftmenu {
+            display: none;
+        }
+
+        .mobile-student {
+            display: none;
+        }
+
+        .desktop-student {
+            display: flex;
+            gap: 7px;
+        }
+        .desktop-nav__leftmenu {
+            display: block;
+            padding: 10px 0;
+
+            .nav-left__menu__margin {
+                margin: 5px 0 3px 10px;
+
+                li {
+                    list-style: none;
+                }
+            }
+
+            .nav-left__title__margin {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    .add-student__btn_color {
+        color: #ffffff;
+        background-color: #009ef7;
+        &:hover {
+            background-color: #0092e4;
+        }
+    }
+}

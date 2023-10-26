@@ -1,0 +1,131 @@
+// @use "@/scss/_mixin.scss" as mixin;
+
+body {
+    background-color: $primary-color;
+    background-image: linear-gradient($primary-color, rgba(26, 84, 121, 0.887));
+
+    @include mixin.md {
+        background-color: $grey-100;
+        background-image: none;
+    }
+}
+
+.login_card {
+    width: 90vw;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: none !important;
+
+    @include mixin.md {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 735px;
+        flex-direction: row;
+        box-shadow: 3px 0px 10px 5px #b8b4b429 !important;
+        // max-width: 735px;
+    }
+
+    .mobile_login_logo {
+        width: 60vw;
+        margin-bottom: 40px;
+
+        @include mixin.md {
+            display: none;
+        }
+    }
+    
+
+    &__left {
+        display: flex;
+        flex-basis: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: $primary-color;
+        background-image: linear-gradient($primary-color, rgba(38, 96, 133, 0.8872));
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        padding: 50px;
+        display: none;
+
+        .login_logo {
+            text-align: center;
+            width: 100%;
+        }
+
+        .login_image {
+            margin-top: 20px;
+            width: 100%;
+
+            img {
+                width: inherit;
+            }
+        }
+
+        @include mixin.md {
+            flex-basis: 50%;
+            display: block;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        background-color: white;
+        border-radius: inherit;
+        width: 100%;
+
+        .login_title {
+            text-align: center;
+
+            .sub_title {
+                padding: 10px 0 20px 0;
+
+                @include mixin.md {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .login_form {
+            width: 100%;
+            text-align: left;
+
+            .btn_login {
+                margin-top: 15px;
+                @include mixin.md {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .login_remember_me {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+
+            span {
+                padding-left: 10px;
+            }
+
+            @include mixin.md {
+                margin-top: 15px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @include mixin.md {
+            flex-basis: 50%;
+            padding: 50px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
